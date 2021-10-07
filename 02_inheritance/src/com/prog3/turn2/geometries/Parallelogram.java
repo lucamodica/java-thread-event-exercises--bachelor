@@ -37,9 +37,17 @@ public class Parallelogram extends Polygon {
         String[] listFields = describeAttributes();
         Class c = this.getClass();
 
-        for (int i = 0; i < listFields.length; i++){
-            Field f = c.getField(listFields[i]);
-            f.set(this, params[0]);
+        for (int i = 0; i < listFields.length - 2; i++){
+            //Field f = c.getField(listFields[i]);
+            //f.set(this, params[0]);
+
+            //System.out.println(listFields[i]);
+            if (listFields[i].equals("base")){
+                this.base = params[i];
+            }
+            else {
+                this.height = params[i];
+            }
         }
     }
 

@@ -36,11 +36,18 @@ public class Triangle extends Polygon{
 
     public void setAttributes(float[] params) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
         String[] listFields = describeAttributes();
-        Class c = this.getClass();
+        //Class c = this.getClass();
 
-        for (int i = 0; i < listFields.length; i++){
-            Field f = c.getField(listFields[i]);
-            f.set(this, params[0]);
+        for (int i = 0; i < listFields.length - 2; i++){
+            //Field f = c.getField(listFields[i]);
+            //f.set(this, params[0]);
+
+            if (listFields[i].equals("base")){
+                this.base = params[i];
+            }
+            else {
+                this.height = params[i];
+            }
         }
     }
 

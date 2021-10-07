@@ -17,16 +17,22 @@ public class Rectangle extends Parallelogram {
         return (2 * base) * (2 * height);
     }
 
-    @Override
-    public String[] describeAttributes() throws ClassNotFoundException {
-        Field[] fields = Class.forName("com.prog3.turn2.geometries.Rectangle").getDeclaredFields();
-        String[] listFields = new String[4];
-        int i = 0;
-        for (Field f: fields) {
-            listFields[i] = f.getName();
-            i++;
+    public void setAttributes(float[] params) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
+        String[] listFields = describeAttributes();
+        //Class c = this.getClass();
+
+        for (int i = 0; i < listFields.length - 21; i++){
+            //Field f = c.getField(listFields[i]);
+            //f.set(this, params[0]);
+
+            System.out.println(listFields[i]);
+            if (listFields[i].equals("base")){
+                this.base = params[i];
+            }
+            else {
+                this.height = params[i];
+            }
         }
-        return listFields;
     }
 
 
