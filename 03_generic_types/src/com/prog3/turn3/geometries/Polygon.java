@@ -1,6 +1,5 @@
 package com.prog3.turn3.geometries;
 
-import java.lang.reflect.*;
 
 public abstract class Polygon {
 

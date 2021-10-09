@@ -18,6 +18,22 @@ public class Triangle extends Polygon{
         setAttributes(attributes);
     }
 
+    public float getBase() {
+        return base;
+    }
+
+    public void setBase(float base) {
+        this.base = base;
+    }
+
+    public float getHeight() {
+        return height;
+    }
+
+    public void setHeight(float height) {
+        this.height = height;
+    }
+
     @Override
     public float getArea() {
         return (base * height)/2;
