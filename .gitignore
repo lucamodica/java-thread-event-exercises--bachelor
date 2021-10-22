@@ -4,5 +4,6 @@
 
 #For each exercises
 */.idea
+*/*/.idea
 */*.iml
 */out
