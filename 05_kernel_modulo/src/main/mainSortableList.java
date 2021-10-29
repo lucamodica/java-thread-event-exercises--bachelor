@@ -16,7 +16,7 @@ public class mainSortableList {
         arrString.sort();
         arrString.print();
 
-        //Test with String element
+        //Test with Integer element
         SortableArray<Integer> arrInt = new SortableArray<>(new SortableListImpl());
         arrInt.add(3);
         arrInt.add(1);
