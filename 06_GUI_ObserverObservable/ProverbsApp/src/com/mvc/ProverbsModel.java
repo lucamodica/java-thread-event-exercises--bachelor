@@ -33,6 +33,7 @@ public class ProverbsModel extends Observable {
         int index = rand.nextInt(proverbs.size());
         currentProverb = proverbs.get(index);
 
-
+        setChanged();
+        notifyObservers(currentProverb);
     }
 }
