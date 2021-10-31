@@ -1,5 +1,7 @@
 package com.mvc;
 
-public interface UI {
-    public void setController(ProverbsController pc);
+import java.util.Observer;
+
+public interface UI extends Observer {
+    void setController(ProverbsController pc);
 }
